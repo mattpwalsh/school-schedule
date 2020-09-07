@@ -1,0 +1,85 @@
+const schedules = [
+  {
+    name: 'Child 1',
+    schedule: [
+      {
+        start: '8:25',
+        end: '9:15',
+        name: 'Algebra',
+        teacher: 'Mr. Smith',
+      },
+      {
+        start: '9:20',
+        end: '9:55',
+        name: 'Gym',
+        teacher: 'Mr. Johnson',
+      },
+      {
+        start: '10:00',
+        end: '10:35',
+        name: 'English',
+        teacher: 'Mr. Smith',
+      },
+      {
+        start: '10:40',
+        end: '11:15',
+        name: 'French',
+        teacher: 'Mrs. Watson',
+      },
+    ],
+  },
+  {
+    name: 'Child 2',
+    schedule: [
+      {
+        start: '9:00',
+        end: '9:20',
+        name: 'Morning Meeting',
+        teacher: 'Mrs. Smith',
+      },
+      {
+        start: '9:20',
+        end: '10:40',
+        name: 'Reading',
+        teacher: 'Mrs. Smith',
+      },
+      {
+        start: '10:50',
+        end: '11:30',
+        name: 'Gym',
+        teacher: 'Mr. Gym',
+      },
+    ],
+  },
+  {
+    name: 'Child 3',
+    schedule: [
+      {
+        start: '9:00',
+        end: '10:15',
+        name: 'Morning Meeting',
+        teacher: 'Ms. Wilson',
+      },
+      {
+        start: '10:20',
+        end: '10:40',
+        name: 'Art',
+        teacher: 'Ms. Wilson',
+      },
+      {
+        start: '10:40',
+        end: '12:00',
+        name: 'Lunch',
+        teacher: 'Ms. Wilson',
+      },
+      {
+        start: '12:00',
+        end: '13:15',
+        name: 'Meet',
+        teacher: 'Ms. Wilson',
+      },
+    ],
+  }
+];
+
+export default schedules;
