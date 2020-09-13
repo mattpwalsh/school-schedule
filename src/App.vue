@@ -8,7 +8,7 @@
 <script>
 import Clock from './components/Clock.vue'
 import Schedules from './components/Schedules';
-import scheduleConfig from './schedules.json';
+import scheduleConfig from './schedules.js';
 
 export default {
   name: 'App',

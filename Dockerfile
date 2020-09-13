@@ -10,5 +10,7 @@ RUN npm run build
 
 RUN npm prune --production
 
-CMD node server.js
+STOPSIGNAL SIGTERM
+
+CMD ["node", "server.js"]
 
