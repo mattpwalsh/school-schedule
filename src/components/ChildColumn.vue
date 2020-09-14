@@ -37,14 +37,14 @@ export default {
   },
   computed: {
     currentClassIndex() {
-      if (this.time < this.momentify(this.child.schedule[0].start)) {
+      if (this.moment(this.time) < this.momentify(this.child.schedule[0].start)) {
         return -9999
       }
-      if (this.time > this.momentify(this.child.schedule[this.child.schedule.length - 1].end)) {
+      if (this.moment(this.time) > this.momentify(this.child.schedule[this.child.schedule.length - 1].end)) {
         return 9999;
       }
       return this.child.schedule.findIndex((scheduleClass) => {
-        return this.time > this.momentify(scheduleClass.start) && this.time < this.momentify(scheduleClass.end)
+        return this.moment(this.time) > this.momentify(scheduleClass.start) && this.time < this.momentify(scheduleClass.end)
       })
     },
     currentClass() {
@@ -76,7 +76,7 @@ export default {
       }
       if (this.currentClassIndex === -1) {
         return this.child.schedule.findIndex((scheduleClass, index) => {
-          return this.time > this.momentify(this.child.schedule?.[index - 1]?.end) && this.time < this.momentify(scheduleClass.start)
+          return this.moment(this.time) > this.momentify(this.child.schedule?.[index - 1]?.end) && this.moment(this.time) < this.momentify(scheduleClass.start)
         })
       }
       return this.child.schedule[this.currentClassIndex + 1];

@@ -7,6 +7,9 @@ export default {
     },
     fromNow(time) {
       return moment(`${moment().format('YYYY-MM-DD')} ${time}`).fromNow();
+    },
+    moment(time) {
+      return moment(time);
     }
   },
 }
