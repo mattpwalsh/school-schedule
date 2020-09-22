@@ -75,7 +75,7 @@ export default {
         return this.child.schedule[0];
       }
       if (this.currentClassIndex === -1) {
-        return this.child.schedule.findIndex((scheduleClass, index) => {
+        return this.child.schedule.find((scheduleClass, index) => {
           return this.moment(this.time) > this.momentify(this.child.schedule?.[index - 1]?.end) && this.moment(this.time) < this.momentify(scheduleClass.start)
         })
       }
